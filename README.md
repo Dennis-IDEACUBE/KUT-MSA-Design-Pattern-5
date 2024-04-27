@@ -30,5 +30,14 @@ http://naver.me/G6frYiaU
 
 ### Git 
 
-      git config user.name ""
-      git config user.email ""
+      git config user.name "dennis"
+      git config user.email "itgenius1004@gmail.com"
+
+      git remote -v
+      git push --force myapp-test
+
+      git config credential.helper store
+      git config credential.helper store --global
+
+      git config credential.helper store
+      git config --global --unset credential.helper
