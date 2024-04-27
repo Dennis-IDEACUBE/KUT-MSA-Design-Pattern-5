@@ -1,0 +1,26 @@
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:latest 
+    hostname: jenkins.example.com
+    ports:
+      - "8080:8080"
+    volumes:
+      - $PWD/jenkins_home:/var/jenkins_home
+    networks:
+      - net 
+      
+  gitlab:
+    container_name: gitlab
+    image: 'gitlab/gitlab-ce:latest'
+    hostname: gitlab.example.com
+    ports:
+      - '80:80'
+    volumes:
+      - $PWD/gitlab_home/config:/etc/gitlab
+      - $PWD/gitlab_home/logs:/var/log/gitlab
+      - $PWD/gitlab_home/data:/var/opt/gitlab
+    networks:
+      - net
+networks:
+  net:
