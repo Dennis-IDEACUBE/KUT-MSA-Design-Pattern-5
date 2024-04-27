@@ -49,9 +49,10 @@ http://naver.me/G6frYiaU
 
 ### Jenkins
 
-      # Install Gitlab, Maven, and Docker plugins.
+      # Install Pipeline Stage View, Gitlab, Maven, and Docker plugins.
       # Create Gitlab settings and authentication token.
-      
+      docker exec -it -u root jenkins bash
+      apt install maven
 ### hosts
 
       # Add 127.0.0.1 gitlab.example.com
