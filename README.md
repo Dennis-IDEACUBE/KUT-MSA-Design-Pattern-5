@@ -105,7 +105,7 @@ http://naver.me/G6frYiaU
               git branch: 'main', url: 'http://gitlab/root/order-service-test.git'
           }
           stage("Test") {
-              //sh "mvn test"
+              sh "mvn test"
           }
           stage("Build") {
               sh "mvn -DskipTests package"
