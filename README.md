@@ -27,3 +27,8 @@ http://naver.me/G6frYiaU
       User user1
       IdentityFile C:\Users\사용자\.ssh\id_rsa
       ------------------------------------------------
+
+### Git 
+
+      git config user.name ""
+      git config user.email ""
