@@ -92,5 +92,24 @@ http://naver.me/G6frYiaU
           #  - '/srv/gitlab/logs:/var/log/gitlab'
           #  - '/srv/gitlab/data:/var/opt/gitlab'
 
+### Jenkins pipeline
+
+      node {
+          APP_NAME = 'order-service-test'
+          RELEASE = '1.0.0'
+          
+          stage("Cleanup Workspace"){
+              cleanWs()
+          }
+          stage("Checkout from SCM"){
+              git branch: 'main', url: 'http://gitlab/root/order-service-test.git'
+          }
+          stage("Test") {
+              //sh "mvn test"
+          }
+          stage("Build") {
+              sh "mvn -DskipTests package"
+          }
+      }
           
       
