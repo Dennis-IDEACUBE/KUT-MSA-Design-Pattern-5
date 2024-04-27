@@ -111,5 +111,8 @@ http://naver.me/G6frYiaU
               sh "mvn -DskipTests package"
           }
       }
-          
-      
+
+
+### swagger-api
+
+[https://github.com/swagger-api/swagger-core/wiki/annotations](https://github.com/swagger-api/swagger-core)
