@@ -41,3 +41,14 @@ http://naver.me/G6frYiaU
 
       git config credential.helper store
       git config --global --unset credential.helper
+
+### GitLab
+
+      # Disable the default branch protected property in Gitlab
+      # Generated GitLab root's Personal Access Tokens
+
+### Jenkins
+
+      # Install Gitlab, Maven, and Docker plugins.
+      # Create Gitlab settings and authentication token.
+      
