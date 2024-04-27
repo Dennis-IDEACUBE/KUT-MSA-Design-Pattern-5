@@ -52,3 +52,44 @@ http://naver.me/G6frYiaU
       # Install Gitlab, Maven, and Docker plugins.
       # Create Gitlab settings and authentication token.
       
+### hosts
+
+      # Add 127.0.0.1 gitlab.example.com
+      # Add 127.0.0.1 jenkins.example.com
+
+### docker-compose.yml
+
+      services:
+        jenkins:
+          container_name: jenkins
+          image: jenkins/jenkins:latest 
+          hostname: jenkins.example.com
+          ports:
+            - "8080:8080"
+          volumes:
+            - $PWD/jenkins_home:/var/jenkins_home
+          networks:
+            - net 
+            
+        gitlab:
+          container_name: gitlab
+          image: 'gitlab/gitlab-ce:latest'
+          hostname: gitlab.example.com
+          ports:
+            - '80:80'
+          volumes:
+            - $PWD/gitlab_home/config:/etc/gitlab
+            - $PWD/gitlab_home/logs:/var/log/gitlab
+            - $PWD/gitlab_home/data:/var/opt/gitlab
+          networks:
+            - net
+      networks:
+        net:
+
+          # volumes:
+          #  - '/srv/gitlab/config:/etc/gitlab'
+          #  - '/srv/gitlab/logs:/var/log/gitlab'
+          #  - '/srv/gitlab/data:/var/opt/gitlab'
+
+          
+      
