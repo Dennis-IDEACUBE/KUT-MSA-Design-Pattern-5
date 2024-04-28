@@ -39,7 +39,7 @@ http://naver.me/G6frYiaU
       git config credential.helper store
       git config credential.helper store --global
 
-      git config credential.helper store
+      git config --unset credential.helper
       git config --global --unset credential.helper
 
 ### GitLab
