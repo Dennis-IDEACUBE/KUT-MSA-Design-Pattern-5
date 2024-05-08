@@ -1,6 +1,4 @@
-# KUT-MSA-Design-Pattern-5
-
-http://naver.me/G6frYiaU
+## KUT-MSA-Design-Pattern-5
 
 ### VirtualBox 
 
